@@ -1,0 +1,51 @@
+.Watermark-page {
+  position: relative;
+}
+.Watermark-page .list {
+    height: 100%;
+    overflow: auto;
+}
+.Watermark-page .item {
+    padding: 20px 15px;
+    color: #191919;
+    font-size: 16px;
+    position: relative;
+}
+.Watermark-page .item::before {
+      content: "";
+      pointer-events: none;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      border-bottom: 1px solid #e8e8e8;
+      border-radius: 2px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+.Watermark-page .item::before {
+          width: 200%;
+          height: 200%;
+          border-radius: 4px;
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+}
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+.Watermark-page .item::before {
+          width: 300%;
+          height: 300%;
+          border-radius: 6px;
+          -webkit-transform: scale(0.333);
+                  transform: scale(0.333);
+}
+}
+.Watermark-page .item label {
+      color: #8b8b8b;
+}
+

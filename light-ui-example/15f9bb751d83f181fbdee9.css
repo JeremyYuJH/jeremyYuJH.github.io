@@ -1,0 +1,16 @@
+.custom-tab {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+.custom-tab .custom-item {
+    font-size: 14px;
+    color: #666666;
+}
+.custom-tab .custom-item-active {
+      background: #666;
+      color: #fff;
+      border: none;
+}
+
