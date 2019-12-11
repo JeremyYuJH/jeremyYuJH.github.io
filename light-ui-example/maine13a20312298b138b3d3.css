@@ -853,6 +853,7 @@ body, html {
       position: relative;
       color: #d8d8d8;
       font-size: 14px;
+      height: 55px;
       visibility: hidden;
 }
 .l-calendar .calendar-contant .calendar-row .calendar-day > span {
@@ -1214,7 +1215,7 @@ body, html {
 }
 .l-dialog > header {
     font-size: 18px;
-    color: #000;
+    color: #333;
     padding: 15px 10px;
 }
 .l-dialog > section {
@@ -1265,7 +1266,7 @@ body, html {
       line-height: 46px;
       white-space: nowrap;
       font-size: 16px;
-      color: #000;
+      color: #333;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       position: relative;
@@ -1679,51 +1680,73 @@ body, html {
   height: 100%;
 }
 
-.l-group-list {
+.run-list-warp {
   position: relative;
   height: 100%;
+  overflow: hidden;
+  background: #fff;
 }
-.l-group-list-warp {
+.run-list-warp .native-scroll {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
-.l-group-list .group-list-bar {
-    padding: 16px 16px;
-    font-size: 14px;
-    color: #999;
-    background: #f7f7f7;
-}
-.l-group-list .group-list-item {
-    position: relative;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 16px;
-    font-size: 14px;
-    color: #333;
-}
-.l-group-list-nav {
+.run-list-warp .run-item-active {
     position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.run-list-warp .run-list-nav-warp {
+    position: absolute;
+    z-index: 1;
     right: 0;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    font-family: Helvetica;
+    color: #aaa;
 }
-.l-group-list-nav > li {
+.run-list-warp .run-list-nav-warp > ul > li {
       padding: 3px;
-      color: #666666;
+      font-size: 12px;
+      line-height: 1;
+      text-align: center;
 }
-.l-group-list .l-nav-active {
-    color: #ffb403;
+.run-list-warp .run-list-nav-warp .run-list-nav-active {
+      color: #ffb403;
 }
-
-.l-group-item-inner .group-list-bar {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
+.run-list-warp .run-list-item .run-list-group-bar {
+    position: relative;
+}
+.run-list-warp .run-list-item .run-list-group-bar > .group-bar-arrow {
+      color: #3c3b3b;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translateY(-50%) rotate(-180deg);
+      -webkit-transform: translateY(-50%) rotate(-180deg);
+      transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
+      transition: transform 0.3s, -webkit-transform 0.3s;
+      -webkit-transition: transform 0.3s;
+      -webkit-transition: -webkit-transform 0.3s;
+      background-position: 4.545% 71.984%;
+      background-size: 222.22% 2810.81%;
+}
+.run-list-warp .run-list-item .run-list-group-bar > .group-bar-arrow-expand {
+        transform: translate(0, -50%) rotate(0deg);
+        -webkit-transform: translate(0, -50%) rotate(0deg);
+}
+.run-list-warp .run-list-item .run-list-group-bar > .group-bar-arrow > i {
+        color: #aaa;
+        font-size: 12px;
+}
+.run-list-warp .run-list-item .run-list-group-item {
+    overflow: hidden;
 }
 
 .l-clip-image {
