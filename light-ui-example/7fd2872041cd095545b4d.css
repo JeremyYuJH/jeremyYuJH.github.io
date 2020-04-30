@@ -1,0 +1,16 @@
+.browse-page .borwse {
+  width: 100%;
+  height: 100%;
+}
+.browse-page .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #eee;
+}
+.browse-page .item-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
